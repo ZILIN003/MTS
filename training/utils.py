@@ -67,25 +67,14 @@ def compute_loss_accuracy_new(net, data_loader, criterion, device):
     return avg_loss, acc_top1, acc_top5
 
 
-Data_Path = {'waterbirds2': 'data/others_own/waterbirds',
-             'PACS': 'data/others_own/pacs',
-             'celeba':'data/others_own/celeba',
-             'texture': 'data/others_own/texture'}
+Data_Path = {'waterbirds2': 'data/waterbirds',
+             'PACS': 'data/pacs',
+             'celeba':'data/celeba',
+             'texture': 'data/texture'}
 
 Model_Weights = {
-    'resnet50': 'pretrained_models/resnet50-0676ba61.pth',
-    'resnet18': 'pretrained_models/resnet18-f37072fd.pth',
+    'resnet50': 'pretrained_models/resnet50-0676ba61.pth' #Download from https://github.com/pytorch/vision/tree/main/references/classification#resnet
 }
-
-
-# Data_Path = {'waterbirds2': 'data/waterbirds',
-#              'PACS': 'data/pacs',
-#              'celeba':'data/celeba',
-#              'texture': 'data/texture'}
-#
-# Model_Weights = {
-#     'resnet50': 'pretrained_models/resnet50-0676ba61.pth' #Download from https://github.com/pytorch/vision/tree/main/references/classification#resnet
-# }
 
 
 def get_class_num(args):
